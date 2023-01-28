@@ -1,0 +1,6 @@
+terraform init
+
+terraform plan (muestra el  plan de lo que va a hacer)
+terraform plan -out xxx.out (guarda la salida del comando en el archivo xxx.out)
+terraform validate (validar que la config esta OK)
+terraform destroy (destruir todo lo desplegado)
