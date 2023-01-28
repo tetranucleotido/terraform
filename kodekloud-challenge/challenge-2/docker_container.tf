@@ -12,12 +12,13 @@ resource "docker_container" "php-httpd" {
     external = 80
     ip       = "0.0.0.0"
   }
-  mounts {
-    source = "/root/code/terraform-challenges/challenge2/lamp_stack/website_content/"
-    target = "/var/www/html"
-    type   = "bind"
-  }
   labels {
-    challenge = "second"
+    label = "challenge"
+    value = "second"
+  }
+    volumes {
+    container_path = "/var/www/html"
+    host_path = "/root/code/terraform-challenges/challenge2/lamp_stack/website_content/"
+    volume_name = "primero"
   }
   }
